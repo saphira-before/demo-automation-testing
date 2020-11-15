@@ -61,4 +61,5 @@ describe('Cadastro', function (){
     cy.url().should('include', '/WebTable.html') //verifica se a nova URL tem /WebTable.html
     
     })
-})              
+})
+      
