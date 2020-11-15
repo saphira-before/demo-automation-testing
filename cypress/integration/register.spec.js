@@ -12,7 +12,7 @@ describe('Cadastro', function (){
       .type('Automação testes Mentoria QA 12345 !@#$%&&*$##')
     
     cy.get('input[type="email"]') //email
-      .type('saphira@gmail.com')
+      .type('teste@gmail.com')
     
     cy.get('input[type="tel"]') //phone
       .type('5417543010')
@@ -62,4 +62,3 @@ describe('Cadastro', function (){
     
     })
 })
-      
