@@ -1,5 +1,5 @@
-describe('Teste Automatizado', function (){
-  it('Mentoria', function (){
+describe('Cadastro', function (){
+  it('Cadastrar novo registro com sucesso', function (){
     cy.visit('http://demo.automationtesting.in/Register.html')
 
     cy.get('input[placeholder="First Name"]')
@@ -12,10 +12,10 @@ describe('Teste Automatizado', function (){
       .type('Automação testes Mentoria QA 12345 !@#$%&&*$##')
     
     cy.get('input[type="email"]') //email
-      .type('saphira@gmail.com')
+      .type('teste@gmail.com')
     
     cy.get('input[type="tel"]') //phone
-      .type('+55(66)99999-9999')
+      .type('5417543010')
    
     cy.get('input[value="FeMale"]').click() //genêro
 
@@ -51,12 +51,14 @@ describe('Teste Automatizado', function (){
       .select("14")
 
     cy.get('input[id="firstpassword"]') //senha
-      .type("12345678")
+      .type("Ertar1345%")
    
     cy.get('input[id="secondpassword"]') //confirmar senha
-      .type("12345678")   
+      .type("Ertar1345%")   
 
     cy.get('button[id="submitbtn"]').click()
+
+    cy.url().should('include', '/WebTable.html') //verifica se a nova URL tem /WebTable.html
     
     })
-})              
+})
